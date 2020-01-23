@@ -1,9 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export default () => {
-    return (
-        <div>
-            Command List
-        </div>
-    );
+  return <div>Command List</div>;
 };

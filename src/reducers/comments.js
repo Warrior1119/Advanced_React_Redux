@@ -1,4 +1,4 @@
-import { SAVE_cOMMENT } from 'actions/types';
+import { SAVE_COMMENT } from 'actions/types';
 
 export default function commentsReducer(state = [], action) {
     switch(action.type) {

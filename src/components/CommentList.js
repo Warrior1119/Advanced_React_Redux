@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 
 class CommentList extends Component {
   renderComments() {
-    this.props.comments.map(comment => {
+    console.log("comments..", this.props.comments);
+    return this.props.comments.map(comment => {
       return <li key={comment}>{ comment }</li>;
     });
   }
@@ -12,7 +13,8 @@ class CommentList extends Component {
     return (
       <div>
         <ul>
-          { this.renderComments() }
+          { this.props.ab }
+          {this.renderComments()}
         </ul>
       </div>
     );
@@ -20,6 +22,7 @@ class CommentList extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(".....state....", state);
   return { comments: state.comments};
 }
 

@@ -12,10 +12,7 @@ class CommentList extends Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.props.ab}
-          {this.renderComments()}
-        </ul>
+        <ul>{this.renderComments()}</ul>
       </div>
     );
   }

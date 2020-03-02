@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 class CommentList extends Component {
   renderComments() {
     console.log("comments..", this.props.comments);
     return this.props.comments.map(comment => {
-      return <li key={comment}>{ comment }</li>;
+      return <li key={comment}>{comment}</li>;
     });
   }
 
@@ -13,7 +13,7 @@ class CommentList extends Component {
     return (
       <div>
         <ul>
-          { this.props.ab }
+          {this.props.ab}
           {this.renderComments()}
         </ul>
       </div>
@@ -23,7 +23,7 @@ class CommentList extends Component {
 
 function mapStateToProps(state) {
   console.log(".....state....", state);
-  return { comments: state.comments};
+  return { comments: state.comments };
 }
 
 export default connect(mapStateToProps)(CommentList);

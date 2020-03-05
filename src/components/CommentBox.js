@@ -17,15 +17,15 @@ class CommentBox extends Component {
 
   shouldNavigateAway() {
     if (!this.props.auth) {
-      this.props.history.push('/');
+      this.props.history.push("/");
     }
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ comment: e.target.value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
 
     this.props.saveComment(this.state.comment);
@@ -43,7 +43,9 @@ class CommentBox extends Component {
             <button>Submit Comment</button>
           </div>
         </form>
-        <button className="fetch-comments" onClick={this.props.fetchComments}>Fetch Comments</button>
+        <button className="fetch-comments" onClick={this.props.fetchComments}>
+          Fetch Comments
+        </button>
       </div>
     );
   }

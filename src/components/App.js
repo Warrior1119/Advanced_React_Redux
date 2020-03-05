@@ -1,19 +1,19 @@
 import React, { Component } from "react";
-import { Route, Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { Route, Link } from "react-router-dom";
+import { connect } from "react-redux";
 import CommentBox from "components/CommentBox";
 import CommentList from "components/CommentList";
-import * as actions from 'actions';
+import * as actions from "actions";
 
 class App extends Component {
   renderButton() {
     if (this.props.auth) {
       return (
-        <button onClick={ ()=> this.props.changeAuth(false) }> Sign Out </button>
+        <button onClick={() => this.props.changeAuth(false)}> Sign Out </button>
       );
     } else {
       return (
-        <button onClick={ ()=> this.props.changeAuth(true) }> Sign in</button>
+        <button onClick={() => this.props.changeAuth(true)}> Sign in</button>
       );
     }
   }

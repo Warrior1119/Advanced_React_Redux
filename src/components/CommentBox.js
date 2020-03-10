@@ -14,7 +14,6 @@ class CommentBox extends Component {
     event.preventDefault();
 
     this.props.saveComment(this.state.comment);
-    console.log("this.props...", this.props);
     this.setState({ comment: "" });
   };
 
